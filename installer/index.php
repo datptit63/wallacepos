@@ -26,6 +26,7 @@ ini_set('display_errors', 'On');
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 $_SERVER['APP_ROOT'] = "/";
 require($_SERVER['DOCUMENT_ROOT'].$_SERVER['APP_ROOT'].'library/wpos/AutoLoader.php'); //Autoload all the classes.
+//require("D:/SoftproVietNam/xampp/htdocs/wallacepos/library/wpos/AutoLoader.php"); //Autoload all the classes.
 
 function checkDependencies(){
     $result = [
@@ -142,6 +143,7 @@ function getCurrentVersion(){
         $settings = WposAdminSettings::getSettingsObject("general");
         if (isset($settings->version))
             return $settings->version;
+//            return "2.4.7";
     } catch (Exception $ex){
     }
     return 0;
@@ -230,7 +232,7 @@ if (isset($_REQUEST['doupgrade'])){
 switch($_SESSION['install_screen']){
     case 1: // Check Dependencies
         $deps = checkDependencies();
-        $curversion = getCurrentVersion();
+//        $curversion = getCurrentVersion();
         include "views/header.html";
         include "views/requirements.php";
         include "views/footer.html";

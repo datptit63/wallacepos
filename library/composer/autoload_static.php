@@ -36,7 +36,7 @@ class ComposerStaticInit04c164d2cd90f723569852fc7a37e407
         ),
         'ElephantIO\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/library',
+            0 => 'D:\\SoftproVietNam\\xampp\\htdocs\\wallacepos\\library',
             1 => __DIR__ . '/..' . '/wisembly/elephant.io/src',
             2 => __DIR__ . '/..' . '/wisembly/elephant.io/test',
         ),
